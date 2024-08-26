@@ -12,7 +12,7 @@
                     <h1 class="m-0">Thêm user</h1>
                 </div>
             </div>
-        <h1>csadjsad</h1>
+        
 <form action="{{route('admin.users.store')}}" method="POST">
     @csrf
     <div class="mb-3 mt-3">
