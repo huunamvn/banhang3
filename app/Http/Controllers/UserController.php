@@ -178,12 +178,5 @@ class UserController extends Controller
         $permission->save();
         return redirect()->back()->with('thong bao', 'thêm thành công');
     }
-    public function impersonate($id)
-    {
-        $user = User::find($id);
-        if ($user) {
-            Session::put('impersonate', $user->id);
-        }
-        return redirect('/users');
-    }
+
 }
