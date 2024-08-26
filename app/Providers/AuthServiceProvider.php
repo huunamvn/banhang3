@@ -19,14 +19,10 @@ class AuthServiceProvider extends ServiceProvider
     /**
      * Register any authentication / authorization services.
      */
-    public function boot(): void
+    public function boot()
     {
-        $this->registerPolicies();
-
-        // Định nghĩa khả năng 'admin'
-        Gate::define('admin', function ($user) {
-            // Điều kiện để xác định người dùng là admin
-            return $user->role === 'admin';
+        Gate::before(function ($user, $ability) {
+            return $user->hasRole('Super Admin') ? true : null;
         });
     }
 }

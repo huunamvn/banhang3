@@ -15,6 +15,7 @@ class UserController extends Controller
      * Display a listing of the resource.
      */
     
+     
     public function __construct()
 {
     // examples:
@@ -32,7 +33,7 @@ class UserController extends Controller
 }
     public function index(Role $role, Permission $permission)
     {
-        // $role = Role::create(['name' => 'admin']);
+        // $role = Role::create(['name' => 'Super Admin']);
         // $permission = Permission::create(['name' => 'create Category']);
         // $role->givePermissionTo($permission);
         // $role = Role::find(7);

@@ -19,7 +19,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::prefix('admin')->middleware(['auth','role:admin|user2|admin4'])
+Route::prefix('admin')->middleware(['auth','role:admin|user2|admin4|Super Admin'])
     ->as('admin.')
     ->group(function () {
         Route::get('/', function () {
